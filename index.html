@@ -548,7 +548,7 @@
     </div>
     <div class="content has-text-justified">
       <p> 
-        <b> We create ``pseudo-pair'' of flash/no-flash images by novel view synthesis</b>. During the data capture stage, we collect <i>unpaired</i> flash/no-flash images from different views. For instance, now that we have captured a no-flash image at View 2, we can learn a 3D representation of the captured flash images at other views, and then synthesize a novel view of the flash image at View 2. As such, we have created a <i>pseudo-pair</i> of flash and no-flash images at View 2. The key idea is that, by taking the difference between the pseudo-pair, we get the transmission component of View 2 that is free of reflection. 
+        <b> We create ``pseudo-pair'' of flash/no-flash images by novel view synthesis</b>. During the data capture stage, we collect <i>unpaired</i> flash/no-flash images from different views. For instance, if we have captured a no-flash image at View 2, we can learn a 3D representation of the captured flash images at other views, and then synthesize a novel view of the flash image at View 2. As such, we have created a <i>pseudo-pair</i> of flash and no-flash images at View 2. The key idea is that, by taking the difference between the pseudo-pair, we get the transmission component of View 2 that is free of reflection. 
       <!-- </p>
         <u>All the results shown below are from real experiments, where both the targets and the aberrations are unseen during training.</u>  
       </p> -->
@@ -577,7 +577,7 @@
     <div class="content has-text-justified">
       <p> 
         <strong>Overview of our proposed method Flash-Splat.</strong>
-        We jointly optimize 4 sets of 3D Gaussian Splats, including the transmitted 3D scene taken with flash <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">T</mi><mi>F</mi></msub></math>, the transmitted 3D scene taken with no flash <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">R</mi></msub></math>, the reflected 3D scene  <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">R</mi></math>, and the reflective fraction map Beta <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&beta;</mi></math>. Based on the Flash/No-flash technique, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">R</mi></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&beta;</mi></math> are shared between the flash image and the no-flash image, and we also encourage the relationship of <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">T</mi><mi>F</mi></msub></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">T</mi><mi>N</mi></msub></math> to be close to linear. 
+        We jointly optimize 4 sets of 3D Gaussian Splats, including the transmitted 3D scene taken with flash <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">T</mi><mi>F</mi></msub></math>, the transmitted 3D scene taken with no flash <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">T</mi><mi>N</mi></msub></math>, the reflected 3D scene  <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">R</mi></math>, and the reflective fraction map Beta <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&beta;</mi></math>. Based on the Flash/No-flash technique, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">R</mi></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&beta;</mi></math> are shared between the flash image and the no-flash image, and we also encourage the relationship of <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">T</mi><mi>F</mi></msub></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">T</mi><mi>N</mi></msub></math> to be close to linear. 
         <!-- we use <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">T</mi><mi>F</mi></msub></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">R</mi></math>, and <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&beta;</mi></math> to render a flash image as the same view and calculate losses with the captured ground truth flash image. Additionally, we also calculate the Pearson linearity loss between <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">T</mi><mi>F</mi></msub></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">T</mi><mi>N</mi></msub></math> to encourage the linearity between them. -->
               <!-- </p>
         <u>All the results shown below are from real experiments, where both the targets and the aberrations are unseen during training.</u>  
@@ -760,8 +760,10 @@
 
 
     <div class="content has-text-justified">
-      <p> <center>Our proposed method outperforms <a  target="_blank" 
-        href="https://bennyguo.github.io/nerfren/">NeRFReN</a> in terms of 3D reflection tranmission separation.</center></p>
+      <p> <center>By utilizing <i>unpaired</i> flash/no-flash multi-view images, our proposed method significantly outperforms <a  target="_blank" 
+        href="https://bennyguo.github.io/nerfren/">NeRFReN</a> in terms of 3D reflection tranmission separation.</center></p>      
+      <!-- <p> <center>Our proposed method outperforms <a  target="_blank" 
+          href="https://bennyguo.github.io/nerfren/">NeRFReN</a> in terms of 3D reflection tranmission separation.</center></p> -->
     </div>
 
 
