@@ -516,37 +516,6 @@
 </section> -->
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-  <!-- <div class="container"> -->
-
-    <h2 class="title is-3"><p><center> Proposed Capturing Mode </center></p></h2>
-    <div class="columns is-centered" style="justify-content: center;">
-      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video> -->
-      <img src="./static/pngs/fig1_teaser_left.jpg" class="center" alt="Interpolate start reference image." style='height: 50%; width: 50%; object-fit: contain; text-align: center; margin: auto;'/>
-      <!-- <h2 class="subtitle has-text-centered">
-        We show that learned wavefront modulations can significantly improve imaging through scattering media.
-      </h2> -->
-    </div>
-    <div class="content has-text-justified">
-      <p> 
-        <!-- <strong>Flash/No-Flash For Reflection Removal</strong>.. -->
-        The user first captures a set of multi-view images with the camera flash on, 
-        and then captures another set of multi-view images with the flash off. 
-        Our algorithm leverages these flash/no-flash images for 3D reflection separation.
-        <!-- </p>
-        <u>All the results shown below are from real experiments, where both the targets and the aberrations are unseen during training.</u>  
-      </p> -->
-    </div>
-  </h2>
-
-  </div>
-</section>
-
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -580,6 +549,38 @@
   <div class="container is-max-desktop">
   <!-- <div class="container"> -->
 
+    <h2 class="title is-3"><p><center> Proposed Capturing Mode </center></p></h2>
+    <div class="columns is-centered" style="justify-content: center;">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video> -->
+      <img src="./static/pngs/fig1_teaser_left.jpg" class="center" alt="Interpolate start reference image." style='height: 50%; width: 50%; object-fit: contain; text-align: center; margin: auto;'/>
+      <!-- <h2 class="subtitle has-text-centered">
+        We show that learned wavefront modulations can significantly improve imaging through scattering media.
+      </h2> -->
+    </div>
+    <div class="content has-text-justified">
+      <p> 
+        <!-- <strong>Flash/No-Flash For Reflection Removal</strong>.. -->
+        The user first captures a set of multi-view images with the camera flash on, 
+        and then captures another set of multi-view images with the flash off  <u> (no need to be paired)</u>.
+        Our algorithm leverages these flash/no-flash images for 3D reflection separation.
+        <!-- </p>
+        <u>All the results shown below are from real experiments, where both the targets and the aberrations are unseen during training.</u>  
+      </p> -->
+    </div>
+  </h2>
+
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+  <!-- <div class="container"> -->
+
     <h2 class="title is-3"><p><center> Our Intuition </center></p></h2>
     <div class="columns is-centered" style="justify-content: center;">
       <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -593,7 +594,7 @@
     </div>
     <div class="content has-text-justified">
       <p> 
-        <b> We create ``pseudo-pair'' of flash/no-flash images by novel view synthesis</b>. During the data capture stage, we collect <u>unpaired</u> flash/no-flash images from different views. For instance, if we have captured a no-flash image at View 2, we can learn a 3D representation of the captured flash images at other views, and then synthesize a novel view of the flash image at View 2. As such, we have created a <i>pseudo-pair</i> of flash and no-flash images at View 2. The key idea is that, by taking the difference between the pseudo-pair, we get the transmission component of View 2 that is free of reflection. 
+        <b> We create ``pseudo-pair'' of flash/no-flash images by novel view synthesis</b>. During the data capture stage, we collect flash/no-flash images from different views. For instance, if we have captured a no-flash image at View 2, we can learn a 3D representation of the captured flash images at other views, and then synthesize a novel view of the flash image at View 2. As such, we have created a <i>pseudo-pair</i> of flash and no-flash images at View 2. The key idea is that, by taking the difference between the pseudo-pair, we get the transmission component of View 2 that is free of reflection. 
       <!-- </p>
         <u>All the results shown below are from real experiments, where both the targets and the aberrations are unseen during training.</u>  
       </p> -->
