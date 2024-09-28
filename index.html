@@ -535,7 +535,7 @@
       <p> 
         <!-- <strong>Flash/No-Flash For Reflection Removal</strong>.. -->
         The user first captures a set of multi-view images with the camera flash on, 
-        and then captures another set of multi-view images with the flash off  <u> (no need to be paired)</u>.
+        and then captures another set of images with the flash off  <u> (no paired capture is requried)</u>.
         Our algorithm leverages these flash/no-flash images for 3D reflection separation.
         <!-- </p>
         <u>All the results shown below are from real experiments, where both the targets and the aberrations are unseen during training.</u>  
@@ -594,7 +594,7 @@
     </div>
     <div class="content has-text-justified">
       <p> 
-        <b> We create ``pseudo-pair'' of flash/no-flash images by novel view synthesis</b>. During the data capture stage, we collect flash/no-flash images from different views. For instance, if we have captured a no-flash image at View 2, we can learn a 3D representation of the captured flash images at other views, and then synthesize a novel view of the flash image at View 2. As such, we have created a <i>pseudo-pair</i> of flash and no-flash images at View 2. The key idea is that, by taking the difference between the pseudo-pair, we get the transmission component of View 2 that is free of reflection. 
+        <b> We create ``pseudo-pair'' of flash/no-flash images by novel view synthesis</b>. During the data capture stage, we collect flash/no-flash images from different views (no paired capture is requried). For instance, if we have captured a no-flash image at View 2, we can learn a 3D representation of the captured flash images at other views, and then synthesize a novel view of the flash image at View 2. As such, we have created a <i>pseudo-pair</i> of flash and no-flash images at View 2. The key idea is that, by taking the difference between the pseudo-pair, we get the transmission component of View 2 that is free of reflection. 
       <!-- </p>
         <u>All the results shown below are from real experiments, where both the targets and the aberrations are unseen during training.</u>  
       </p> -->
